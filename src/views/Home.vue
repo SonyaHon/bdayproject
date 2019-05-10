@@ -1,18 +1,23 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <v-layout row fill-height>
+        <v-flex md5>
+            <days-counter></days-counter>
+        </v-flex>
+        <v-divider vertical></v-divider>
+        <v-flex class="hidden-sm-and-down">
+            <charts></charts>
+        </v-flex>
+    </v-layout>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
-export default {
-  name: 'home',
-  components: {
-    HelloWorld
-  }
-}
+  import DaysCounter from "../components/DaysCounter";
+  import Charts from '../components/Charts';
+
+
+  export default {
+    name:       "home",
+    components: {DaysCounter, Charts},
+  };
 </script>
