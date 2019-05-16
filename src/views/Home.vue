@@ -1,23 +1,18 @@
 <template>
-    <v-layout row fill-height>
-        <v-flex md5>
-            <days-counter></days-counter>
-        </v-flex>
-        <v-divider vertical></v-divider>
-        <v-flex class="hidden-sm-and-down">
-            <charts></charts>
-        </v-flex>
+    <v-layout column fill-height align-center>
+      <v-flex>
+        <days-counter></days-counter>
+      </v-flex>
     </v-layout>
 </template>
 
 <script>
+import DaysCounter from "../components/Counter";
 
-  import DaysCounter from "../components/DaysCounter";
-  import Charts from '../components/Charts';
-
-
-  export default {
-    name:       "home",
-    components: {DaysCounter, Charts},
-  };
+export default {
+  name: "home",
+  components: { DaysCounter },
+  methods: {
+  }
+};
 </script>
