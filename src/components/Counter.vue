@@ -1,23 +1,13 @@
 <template>
     <div class="days-counter">
-        <div class="days">
-            {{daysWithoutAccident}}
-        </div>
-        <div class="wrapper">
-            <div class="hours">
-                {{hours}}:
-            </div>
-            <div class="minutes">
-                {{minutes}}:
-            </div>
-            <div class="secs">
-                {{secs}}
-            </div>
-        </div>
+
     </div>
 </template>
 
 <script>
+
+  import moment from 'moment';
+
   export default {
     name: "DaysCounter",
     data() {
@@ -45,19 +35,5 @@
      display: flex;
      justify-content: center;
      align-items: center;
-     flex-direction: column;
-
-     .days {
-         font-size: 90px;
-     }
-
-     .explanation {
-
-     }
-
-     .wrapper {
-         display: flex;
-         font-size: 40px;
-     }
  }
 </style>
